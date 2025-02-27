@@ -29,6 +29,7 @@ This project is a Progressive Web App (PWA) for managing tasks in an intuitive a
 ✔ Responsive Design – Works on desktop & mobile devices.
 ✔ Dark/Light Mode – Theme toggle for better readability.
 ✔ Minimal & Clean UI – Simple yet effective layout.
+
 🛠️ Technologies Used
     Frontend – HTML, CSS, JavaScript
     Local Storage – Store tasks persistently
