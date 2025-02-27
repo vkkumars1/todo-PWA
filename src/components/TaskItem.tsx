@@ -63,12 +63,12 @@ const TaskItem = ({ task, onToggleCompletion, onDelete, onEdit }: TaskItemProps)
         variant="ghost"
         size="icon"
         className={`task-checkbox rounded-full border-2 h-5 w-5 min-w-5 p-0 transition-all duration-300 ${
-          task.completed ? 'bg-primary border-primary' : 'border-accent hover:border-primary/50'
+          task.completed ? 'bg-blue-500 border-blue-500' : 'border-white/30 hover:border-blue-400/50'
         }`}
         onClick={handleToggle}
         aria-label={task.completed ? "Mark as incomplete" : "Mark as complete"}
       >
-        {task.completed && <Check size={12} className="text-primary-foreground" />}
+        {task.completed && <Check size={12} className="text-white" />}
       </Button>
 
       {isEditing ? (
@@ -77,7 +77,7 @@ const TaskItem = ({ task, onToggleCompletion, onDelete, onEdit }: TaskItemProps)
           onChange={(e) => setEditedText(e.target.value)}
           onBlur={handleEditSubmit}
           onKeyDown={handleKeyDown}
-          className="flex-1 bg-background/50 border-accent"
+          className="flex-1 bg-white/5 border-white/20"
           autoFocus
         />
       ) : (
@@ -93,7 +93,7 @@ const TaskItem = ({ task, onToggleCompletion, onDelete, onEdit }: TaskItemProps)
               setEditedText(task.text);
               setIsEditing(false);
             }}
-            className="h-8 w-8 hover:bg-accent/50"
+            className="h-8 w-8 hover:bg-white/10"
             aria-label="Cancel editing"
           >
             <X size={16} />
@@ -104,7 +104,7 @@ const TaskItem = ({ task, onToggleCompletion, onDelete, onEdit }: TaskItemProps)
               variant="ghost"
               size="icon"
               onClick={() => setIsEditing(true)}
-              className="h-8 w-8 hover:bg-accent/50"
+              className="h-8 w-8 hover:bg-white/10"
               aria-label="Edit task"
             >
               <Pencil size={16} />
@@ -113,7 +113,7 @@ const TaskItem = ({ task, onToggleCompletion, onDelete, onEdit }: TaskItemProps)
               variant="ghost"
               size="icon"
               onClick={handleDelete}
-              className="h-8 w-8 text-destructive hover:bg-destructive/20"
+              className="h-8 w-8 text-red-400 hover:bg-red-500/10"
               aria-label="Delete task"
             >
               <Trash size={16} />
