@@ -1,68 +1,103 @@
 # 📌 To-Do List PWA
 
-A **Progressive Web App (PWA)** for managing daily tasks efficiently, even without an internet connection. This To-Do app supports **offline mode, caching, push notifications, and local storage** to enhance the user experience.
+A lightweight, offline-ready **Progressive Web App (PWA)** designed for seamless task management with caching, push notifications, and installable app features. ✅🚀
 
 ---
 
-## 🚀 Features
+## 📂 Site Map
 
-### ✅ Task Management
-- Add new tasks with ease
-- Edit task names
-- Mark tasks as completed
-- Delete tasks when done
+Since this is a **frontend-only** PWA, it follows a **single-page application (SPA)** structure, dynamically updating content without requiring multiple pages.
 
-### 📶 Offline Functionality
-- Works even without an internet connection
-- Stores tasks locally using **LocalStorage**
-- Uses **Service Workers** to cache essential files
-
-### 📱 PWA Features
-- **Installable on mobile & desktop**
-- **App Manifest** for custom icons & splash screen
-- **Push Notifications** to remind users of pending tasks
-
-**4️⃣ PWA Enhancements**
-
-    Manifest File: Allows users to install the app on their home screen.
-    Service Worker: Handles caching and offline mode.
-    Background Sync: Ensures tasks added offline are saved when back online.
-
----
-
-## 🏗️ Project Structure
 ```
-📁 To-Do PWA  
- ├── 📁 assets/        → Icons, manifest, and styles  
- ├── 📁 js/            → JavaScript files (logic & service worker)  
- ├── index.html        → Main UI  
- ├── styles.css        → Styling for UI  
- ├── manifest.json     → PWA configuration  
- ├── service-worker.js → Offline support & caching  
+📂 Home (/)
+│── 📝 To-Do List Section
+│     ├── Add Task
+│     ├── Edit Task
+│     ├── Delete Task
+│     ├── Mark as Complete
+│── 📂 Offline Page (/offline.html)
+│── ⚙️ Settings (Inside Home Page)
+│     ├── Enable/Disable Push Notifications
+│     ├── Clear Completed Tasks
+│── 📜 About Page (/about.html)
+│── 📜 Privacy Policy (/privacy.html)
+│── 📂 Service Worker (Handles offline & caching)
+│── 📂 Web Manifest (For installation)
 ```
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** HTML, CSS, JavaScript
-- **Storage:** Local Storage for task persistence
-- **PWA Enhancements:** Service Workers & Push Notifications
+## 💡 Page Breakdown & Hierarchy
+
+### 1️⃣ Home (/)
+The **main PWA page** displaying the **To-Do List UI**.
+- Users can **add, update, delete, and mark tasks as complete**.
+- Uses **LocalStorage** for persistent task management.
+
+🔗 **Interconnects with:**
+- **Service Worker** (for caching and offline mode)
+- **Push Notification API** (for task reminders)
+- **IndexedDB/LocalStorage** (for data persistence)
+
+### 2️⃣ Offline Page (/offline.html)
+Displayed when the user **loses internet connection**.
+- Shows a **custom message** and allows users to view cached tasks.
+
+🔗 **Interconnects with:**
+- **Service Worker** (to detect offline mode)
+
+### 3️⃣ Settings (Inside Home Page)
+A **modal-based settings section** for user preferences.
+- **Enable/disable push notifications**.
+- **Clear completed tasks**.
+
+🔗 **Interconnects with:**
+- **Home Page** (Accessible via settings button)
+- **Web Push API** (for notifications management)
+
+### 4️⃣ About Page (/about.html)
+Displays information about the app, its features, and how it works.
+
+🔗 **Interconnects with:**
+- **Home Page** (Footer link)
+
+### 5️⃣ Privacy Policy (/privacy.html)
+Details on data storage, notifications, and offline caching policies.
+
+🔗 **Interconnects with:**
+- **Home Page** (Footer link)
 
 ---
 
-## 📥 Installation & Usage
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/todo-pwa.git
-   ```
-2. Open `index.html` in a browser.
-3. To install as a PWA, click the **Install App** button in the browser.
+## 📌 Navigation Flow
+
+1. User **opens the app (/) → interacts with the to-do list**.
+2. User **goes offline → Offline page (/offline.html) appears**.
+3. User **enables push notifications** in settings → Push API stores the preference.
+4. User **installs the app** → Web App Manifest provides an install prompt.
 
 ---
 
-## 📌 How It Works
-1. **Adding Tasks:** Type a task and click "Add".
-2. **Marking Tasks:** Click the checkbox to mark as done.
-3. **Offline Mode:** Tasks remain stored even without the internet.
-4. **Push Notifications:** Get task reminders when enabled.
+## 📌 Summary of Page Interconnections
+
+| Page | Linked To |
+|------------|-----------------------------|
+| **Home (/)** | Offline Page, Settings, About, Privacy |
+| **Offline Page (/offline.html)** | Home |
+| **Settings (Inside Home)** | Push Notifications, LocalStorage |
+| **About (/about.html)** | Home |
+| **Privacy Policy (/privacy.html)** | Home |
+
+---
+
+## 🎯 Key Features
+✅ **Offline Mode** – Works without internet using service workers.  
+✅ **Push Notifications** – Alerts users of upcoming tasks.  
+✅ **Local Storage** – Saves tasks even after closing the app.  
+✅ **Installable PWA** – Can be added to the home screen like a native app.  
+✅ **Responsive UI** – Works on all devices and screen sizes.  
+
+---
+
+This structured **site map and feature breakdown** ensures a smooth and efficient PWA experience with a **minimalist design** and **essential functionalities**! 🚀
 
