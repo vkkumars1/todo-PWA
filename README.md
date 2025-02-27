@@ -23,6 +23,7 @@ A **Progressive Web App (PWA)** for managing daily tasks efficiently, even witho
 - **Push Notifications** to remind users of pending tasks
 
 **4️⃣ PWA Enhancements**
+
     Manifest File: Allows users to install the app on their home screen.
     Service Worker: Handles caching and offline mode.
     Background Sync: Ensures tasks added offline are saved when back online.
