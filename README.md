@@ -1,69 +1,36 @@
-# Welcome to your Lovable project
+📌 To-Do List PWA
+📝 Project Overview
+This project is a Progressive Web App (PWA) for managing tasks in an intuitive and efficient way. The app allows users to add, edit, complete, and delete tasks, while supporting offline functionality, caching, and push notifications.
+📁 To-Do PWA  
+ ├── 📁 assets/        → Icons, manifest, and styles  
+ ├── 📁 js/            → JavaScript files (logic & service worker)  
+ ├── index.html        → Main UI  
+ ├── styles.css        → Styling for UI  
+ ├── manifest.json     → PWA configuration  
+ ├── service-worker.js → Offline support & caching  
+🎯 Key Functionalities
+🔹 1. Task Management
 
-## Project info
+✔ Add tasks – Users can enter a task and add it to the list.
+✔ Edit tasks – Modify task names.
+✔ Mark tasks as complete – Checkbox to mark tasks as done.
+✔ Delete tasks – Remove completed or unnecessary tasks.
+🔹 2. Offline Functionality
 
-**URL**: https://lovable.dev/projects/8364bf28-b69b-4d2b-a32f-0d36dd0878a6
+✔ Local Storage – Tasks are stored in local storage so they persist.
+✔ Service Worker Caching – App loads even without an internet connection.
+🔹 3. PWA Features
 
-## How can I edit this code?
+✔ Installable App – Users can install it like a native app.
+✔ App Manifest – Custom icons, splash screen, and name for mobile use.
+✔ Push Notifications – Reminders for pending tasks.
+🔹 4. UI & User Experience
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/8364bf28-b69b-4d2b-a32f-0d36dd0878a6) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8364bf28-b69b-4d2b-a32f-0d36dd0878a6) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+✔ Responsive Design – Works on desktop & mobile devices.
+✔ Dark/Light Mode – Theme toggle for better readability.
+✔ Minimal & Clean UI – Simple yet effective layout.
+🛠️ Technologies Used
+    Frontend – HTML, CSS, JavaScript
+    Local Storage – Store tasks persistently
+    Service Workers – Enable offline functionality
+    Push Notifications – Remind users of pending tasks
